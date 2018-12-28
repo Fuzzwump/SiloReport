@@ -31,12 +31,7 @@ namespace SiloReport
         //Event handler method
         private void dayStartedEvents(object sender, DayStartedEventArgs e)
         {
-            bool hasSilo = false;
-            foreach (Building building in Game1.getFarm().buildings)
-            {
-                if (building.buildingType.Value == "Silo")
-                    hasSilo = true;
-            }
+            bool hasSilo = Game1.getFarm().buildings.Any(b => b.buildingType.Value == "Silo");
 
             //Chat Mode
             if (config.notificationMode == notificationModes.ChatMode)
