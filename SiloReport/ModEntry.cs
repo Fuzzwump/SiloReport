@@ -70,7 +70,8 @@ namespace SiloReport
                 //UI Message logic
                 if (hasSilo)
                 {
-                    HUDMessage report = new HUDMessage($"Hay left: {Game1.getFarm().piecesOfHay}", (String) null);
+                    HUDMessage report = new HUDMessage($"Hay left: {Game1.getFarm().piecesOfHay}");
+                    report.noIcon = true;
                     Game1.addHUDMessage(report);
                 }
 
