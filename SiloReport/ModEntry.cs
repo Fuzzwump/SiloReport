@@ -31,8 +31,7 @@ namespace SiloReport
         //Event handler method
         private void dayStartedEvents(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
-            bool hasSilo = Game1.getFarm().buildings.Any(b 
-            => b.buildingType.Value == "Silo");
+            bool hasSilo = Game1.getFarm().buildings.Any(b => b.buildingType.Value == "Silo");
 
             //Chat Mode
             if (config.notificationMode == notificationModes.ChatMode)
